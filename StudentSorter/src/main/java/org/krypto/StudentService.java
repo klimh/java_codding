@@ -38,6 +38,19 @@ public class StudentService {
         return students;
     }
 
+    public void sortujMalejacowgSredniejAPI_Stream(List<Student> students){
+        students.stream()
+                .sorted(Comparator.comparingDouble(Student::getAv_grade).reversed())
+                .forEach(System.out::println);
+    }
+
+    public void sortujString(List<Student> students){
+        students.stream()
+                .sorted(Comparator.comparing(Student::getName))
+                .forEach(System.out::println);
+    }
+
+
     public List<Student> sortujWgImienia(List<Student> students){
         students.sort(Comparator.comparing(Student::getName));
         return students;
