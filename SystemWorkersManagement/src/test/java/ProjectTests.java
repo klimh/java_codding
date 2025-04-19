@@ -20,5 +20,4 @@ public class ProjectTests {
         Assertions.assertEquals(expectedSalary,newWorker.countSalary());
     }
 
-
 }
